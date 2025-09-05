@@ -1,0 +1,1 @@
+Case When exists (SELECT * FROM SYS.SYSTRIGGER WHERE trigger_name = 'tr_t_assdetail_fill_f01') Then drop trigger tr_t_assdetail_fill_f01 end;

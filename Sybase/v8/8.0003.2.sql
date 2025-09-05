@@ -1,0 +1,1 @@
+Update  t_nodent Set imagedent = substring(imagedent, 20) WHERE Left(imagedent, 19) = 'c:\ii4net\dentitek\';

@@ -1,0 +1,2 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_examendentdenturo' and syscolumn.column_name = 'id_visit') Then alter table t_examendentdenturo add id_visit INTEGER NULL end;
+								

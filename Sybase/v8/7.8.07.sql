@@ -1,0 +1,23 @@
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'TPH001','Résidence','Residence',1 from dummy where not exists (select * from t_system_codes where code = 'TPH001');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'TPH002','Bureau','Office',2 from dummy where not exists (select * from t_system_codes where code = 'TPH002');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'TPH003','Cellulaire','Cellular',3 from dummy where not exists (select * from t_system_codes where code = 'TPH003');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'TPH004','Autre','Other',4 from dummy where not exists (select * from t_system_codes where code = 'TPH004');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'CPR001','Lui-même','Himself',1 from dummy where not exists (select * from t_system_codes where code = 'CPR001');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'CPR002','Conjoint','Husband',2 from dummy where not exists (select * from t_system_codes where code = 'CPR002');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'CPR003','Enfant','Child',3 from dummy where not exists (select * from t_system_codes where code = 'CPR003');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,code_assoc_num) select 'CPR004','Parent','Parent',4 from dummy where not exists (select * from t_system_codes where code = 'CPR004');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR005','Tuteur','Tutor',5,5 from dummy where not exists (select * from t_system_codes where code = 'CPR005');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR006','Frère - Soeur','Brother-sister',6,6 from dummy where not exists (select * from t_system_codes where code = 'CPR006');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR007','Cousin - Cousine','Cousin',7,7 from dummy where not exists (select * from t_system_codes where code = 'CPR007');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR008','Tante - Oncle','Aunt - Uncle',8,8 from dummy where not exists (select * from t_system_codes where code = 'CPR008');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR009','Neveu - Nièce','Nephew - niece',9,9 from dummy where not exists (select * from t_system_codes where code = 'CPR009');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR010','Grand-parent','Grand parent',10,10 from dummy where not exists (select * from t_system_codes where code = 'CPR010');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR011','Petit-enfant','Grandchild',11,11 from dummy where not exists (select * from t_system_codes where code = 'CPR011');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR012','Beau-père','Stepfather',12,13 from dummy where not exists (select * from t_system_codes where code = 'CPR012');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR013','Belle-mère','Stepmother',13,14 from dummy where not exists (select * from t_system_codes where code = 'CPR013');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR014','Beau-fils','Son-in-law',14,15 from dummy where not exists (select * from t_system_codes where code = 'CPR014');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR015','Belle-fille','Daughter-in-law',15,16 from dummy where not exists (select * from t_system_codes where code = 'CPR015');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR016','EX conjoint','Ex husband',16,17 from dummy where not exists (select * from t_system_codes where code = 'CPR016');
+INSERT INTO t_system_codes (code,nom_fr,nom_an,ordre,code_assoc_num) select 'CPR017','Autre','Other',17,12 from dummy where not exists (select * from t_system_codes where code = 'CPR017');
+Update t_listmod set t_listmod.descran = If IsNull(Trim(t_listmod.descran), '') = '' Then t_listmod.description + ' (an)' else t_listmod.descran end if;
+

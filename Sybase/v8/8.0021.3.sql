@@ -1,0 +1,1 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_assentete' and syscolumn.column_name = 'id_assentete_parent') Then alter table t_assentete add id_assentete_parent as integer end;

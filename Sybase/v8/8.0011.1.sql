@@ -1,0 +1,1 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_apptpv' and syscolumn.column_name = 'requestid') Then ALTER TABLE t_apptpv ADD requestid BIGINT NOT NULL DEFAULT 1 end;

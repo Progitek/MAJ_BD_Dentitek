@@ -1,0 +1,1 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_plantraitement' and syscolumn.column_name = 'dentconsent') Then alter table t_plantraitement add dentconsent bit Null end;

@@ -1,0 +1,1 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_guide' and syscolumn.column_name = 'hidegroup') Then alter table t_guide add hidegroup integer DEFAULT 0 end;

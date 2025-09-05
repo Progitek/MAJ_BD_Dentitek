@@ -1,0 +1,7 @@
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC001', 'Tél. res',  'Home tel',  1, Null, 1 from dummy where not exists (select * from t_system_codes where code = 'TTC001');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC002', 'Tél. bur',  'Off. tel',  2, Null, 2 from dummy where not exists (select * from t_system_codes where code = 'TTC002');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC003', 'Cell',  'Cell',  3, Null, 3 from dummy where not exists (select * from t_system_codes where code = 'TTC003');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC004', 'Courriel',  'Email',  4, Null, 4 from dummy where not exists (select * from t_system_codes where code = 'TTC004');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC005', 'SMS',  'SMS',  5, Null, 5 from dummy where not exists (select * from t_system_codes where code = 'TTC005');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC006', 'Par resp',  'By resp',  6, Null, 6 from dummy where not exists (select * from t_system_codes where code = 'TTC006');
+insert into t_system_codes (code, nom_fr, nom_an, ordre, code_assoc_char, code_assoc_num) select  'TTC007', 'Autre tél',  'Other tel',  7, Null, 7 from dummy where not exists (select * from t_system_codes where code = 'TTC007');

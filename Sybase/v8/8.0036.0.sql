@@ -1,0 +1,1 @@
+Case When not exists (Select * From syscolumn inner join systable on syscolumn.table_id = systable.table_id where systable.table_name = 't_optiongen' and syscolumn.column_name = 'horaffplantraitacte') Then alter table t_optiongen add horaffplantraitacte integer default 0 end;

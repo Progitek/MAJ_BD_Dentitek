@@ -1,0 +1,1 @@
+insert into t_system_codes (code, nom_fr, nom_an,ordre,code_assoc_char,code_assoc_num) select  'ACC005', 'Auto',  'Auto',  5, '', Null from dummy where not exists (select * from t_system_codes where code = 'ACC005');
